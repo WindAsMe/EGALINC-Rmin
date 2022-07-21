@@ -131,8 +131,8 @@ def CCVIl(Dim, func):
 
             for j in range(i + 1, len(groups)):
                 cost += 2
-                if i < len(groups) - 1 and j < len(groups) and not Monotonicity_check(Dim, groups[i][0], groups[j][0], fi,
-                                                                                      func, f0):
+                if i < len(groups) - 1 and j < len(groups) and not Monotonicity_check(Dim, groups[i][0], groups[j][0],
+                                                                                      fi, func, f0):
                     groups[i].extend(groups.pop(j))
                     j -= 1
     return groups, cost
